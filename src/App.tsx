@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { motion } from "framer-motion";
 import { stagger, fadeUp } from "./utils/animations";
 import { AnnouncementBar } from "./components/layout/AnnouncementBar";
