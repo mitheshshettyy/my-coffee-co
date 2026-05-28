@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f5f3ee;
+  text-align: center;
+}
+
+::selection {
+  background: #f8b32b;
+  color: #112bff;
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.bean-pattern {
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 1.5px, transparent 1.5px),
+    radial-gradient(ellipse at center, transparent 38%, rgba(255, 255, 255, 0.75) 40%, rgba(255, 255, 255, 0.75) 44%, transparent 46%);
+  background-size: 74px 74px, 92px 60px;
+  background-position: 0 0, 18px 12px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
