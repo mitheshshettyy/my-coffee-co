@@ -4,7 +4,7 @@ import { essentials } from "../../data/mockData";
 
 export function EssentialCard({ item, featured = false }: { item: (typeof essentials)[number]; featured?: boolean }) {
   return (
-    <motion.div variants={fadeUp} className={`group overflow-hidden rounded-[2rem] bg-white/10 text-center ring-1 ring-white/15 backdrop-blur-md transition duration-500 hover:-translate-y-2 hover:bg-white/15 ${featured ? "lg:col-span-2" : ""}`}>
+    <motion.div variants={fadeUp} className={`group overflow-hidden rounded-[2rem] bg-white/10 text-center ring-1 ring-white/15 backdrop-blur-md transition duration-500 hover:-translate-y-2 hover:bg-white/15 ${featured ? "sm:col-span-2 lg:col-span-2" : ""}`}>
       <div className="overflow-hidden text-center">
         <img src={item.image} alt={item.title} className={`w-full object-cover transition duration-700 group-hover:scale-110 ${featured ? "h-80" : "h-60"}`} />
       </div>

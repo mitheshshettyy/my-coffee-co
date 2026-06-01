@@ -22,18 +22,18 @@ export function Hero() {
           <motion.p variants={fadeUp} className="text-center text-xs font-black uppercase tracking-[0.5em] text-[#F8B32B] sm:text-sm">
             Freshly roasted across India
           </motion.p>
-          <motion.h1 variants={fadeUp} className="max-w-5xl text-center text-6xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-white sm:text-7xl lg:text-9xl">
+          <motion.h1 variants={fadeUp} className="max-w-5xl text-center text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-white sm:text-7xl lg:text-9xl">
             My Coffee Co.
           </motion.h1>
-          <motion.p variants={fadeUp} className="max-w-3xl text-center text-2xl font-black tracking-tight text-[#F8B32B] sm:text-4xl">
+          <motion.p variants={fadeUp} className="max-w-3xl text-center text-xl font-black tracking-tight text-[#F8B32B] sm:text-3xl md:text-4xl">
             Small Sips. Big Moments.
           </motion.p>
           <motion.p variants={fadeUp} className="max-w-2xl text-center text-base leading-8 text-white/82 sm:text-lg">
             Premium beans, drip bags, instant coffee, and brewing tools crafted for real mornings, focused work, and cafe-quality rituals at home.
           </motion.p>
-          <motion.div variants={fadeUp} className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
-            <Button>Shop Best Sellers</Button>
-            <Button variant="secondary">Build Your Brew Kit</Button>
+          <motion.div variants={fadeUp} className="flex w-full max-w-md flex-col items-center justify-center gap-4 text-center sm:max-w-none sm:flex-row">
+            <Button className="w-full sm:w-auto">Shop Best Sellers</Button>
+            <Button variant="secondary" className="w-full sm:w-auto">Build Your Brew Kit</Button>
           </motion.div>
         </motion.div>
       </div>

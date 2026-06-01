@@ -16,7 +16,7 @@ export function Testimonials() {
   const review = testimonials[active];
 
   return (
-    <section id="reviews" className="overflow-hidden bg-[#F5F3EE] px-4 py-24 text-center sm:px-6 lg:px-8">
+    <section id="reviews" className="overflow-hidden bg-[#F5F3EE] px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={stagger} className="mx-auto max-w-6xl text-center">
         <SectionHeader eyebrow="Reviews" title="Customers Brewing Better" text="Smooth ratings, real routines, and cups that keep people coming back." />
         <div className="relative mx-auto mt-14 max-w-4xl text-center">

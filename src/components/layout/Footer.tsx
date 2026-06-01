@@ -9,8 +9,8 @@ export function Footer() {
 
   return (
     <footer id="about-us" className="bg-white px-4 py-16 text-center text-[#112BFF] sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-12 text-center lg:grid-cols-[1.2fr_2fr_1.2fr]">
-        <div className="flex flex-col items-center justify-start gap-6 text-center">
+      <div className="mx-auto grid max-w-7xl gap-12 text-center md:grid-cols-2 lg:grid-cols-[1.2fr_2fr_1.2fr]">
+        <div className="flex flex-col items-center justify-start gap-6 text-center md:order-1">
           <BrandLogo dark />
           <p className="max-w-xs text-center leading-7 text-[#112BFF]/70">Premium coffee for modern routines. Fresh roast, bold flavor, real moments.</p>
           <div className="flex items-center justify-center gap-3 text-center">
@@ -22,7 +22,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-10 text-center sm:grid-cols-3">
+        <div className="grid gap-10 text-center sm:grid-cols-3 md:order-3 md:col-span-2 lg:order-2 lg:col-span-1">
           {columns.map((column) => (
             <div key={column.title} className="space-y-5 text-center">
               <h3 className="text-center text-lg font-black uppercase tracking-tight">{column.title}</h3>
@@ -37,7 +37,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-start gap-5 text-center">
+        <div className="flex flex-col items-center justify-start gap-5 text-center md:order-2 lg:order-3">
           <h3 className="text-center text-lg font-black uppercase tracking-tight">Contact Details</h3>
           <p className="text-center leading-7 text-[#112BFF]/70">hello@mycoffeeco.com</p>
           <p className="text-center leading-7 text-[#112BFF]/70">Roasting and shipping across India</p>
