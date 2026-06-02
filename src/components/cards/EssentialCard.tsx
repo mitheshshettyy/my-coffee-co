@@ -4,7 +4,7 @@ import { fadeUp } from "../../utils/animations";
 import { essentials } from "../../data/mockData";
 import { useCartActions } from "../../context/CartContext";
 
-export const EssentialCard = React.memo(function EssentialCard({ item, featured = false }: { item: (typeof essentials)[number]; featured?: boolean }) {
+export const EssentialCard = React.memo(function EssentialCard({ item }: { item: (typeof essentials)[number] }) {
   const { addToCart } = useCartActions();
 
   const handleAddToCart = () => {
@@ -19,9 +19,7 @@ export const EssentialCard = React.memo(function EssentialCard({ item, featured 
   return (
     <motion.div
       variants={fadeUp}
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-white/10 text-center ring-1 ring-white/15 backdrop-blur-md transition-all duration-300 hover:bg-white/15 will-change-transform [backface-visibility:hidden] ${
-        featured ? "sm:col-span-2 lg:col-span-2" : ""
-      }`}
+      className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-white/10 text-center ring-1 ring-white/15 backdrop-blur-md transition-all duration-300 hover:bg-white/15 will-change-transform [backface-visibility:hidden]"
     >
       {/* Badge */}
       {"badge" in item && item.badge && (
@@ -34,7 +32,7 @@ export const EssentialCard = React.memo(function EssentialCard({ item, featured 
         <img
           src={item.image}
           alt={item.title}
-          className={`w-full object-cover transition duration-700 group-hover:scale-105 will-change-transform ${featured ? "h-64 sm:h-80" : "h-48 sm:h-60"}`}
+          className="h-48 w-full object-cover transition duration-700 group-hover:scale-105 will-change-transform sm:h-60"
           loading="lazy"
         />
       </div>

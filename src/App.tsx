@@ -184,9 +184,9 @@ export default function App() {
               variants={stagger}
               className="mt-10 flex gap-5 overflow-x-auto pb-6 scroll-snap-x snap-mandatory scrollbar-none justify-start px-2 sm:grid sm:grid-cols-2 lg:grid-cols-5 sm:overflow-x-visible sm:pb-0"
             >
-              {essentials.map((item, index) => (
+              {essentials.map((item) => (
                 <div key={item.title} className="min-w-[260px] sm:min-w-0 snap-center flex-shrink-0 w-full sm:w-auto">
-                  <EssentialCard item={item} featured={index === 4} />
+                  <EssentialCard item={item} />
                 </div>
               ))}
             </motion.div>
