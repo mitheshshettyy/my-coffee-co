@@ -26,6 +26,20 @@ body {
   background-position: 0 0, 18px 12px;
 }
 
+/* Hide scrollbars for horizontal carousel views */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Safe Area Insets for modern mobile screen heights */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
